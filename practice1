@@ -1,0 +1,15 @@
+def binary_search_3(A,x):
+    cnt = 0
+    for i,a in enumerate(A):
+        if x == a:
+            cnt = cnt +1
+    return cnt
+
+import random
+random.seed(177)
+A = [random.randint(1,1000) for i in range(10000)]
+A.sort()
+x = int(input())
+count = binary_search_3(A,x)
+print(count)
+
